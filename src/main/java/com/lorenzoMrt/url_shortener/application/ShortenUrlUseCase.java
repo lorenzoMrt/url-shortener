@@ -19,12 +19,12 @@ public class ShortenUrlUseCase {
     public String execute(String originalUrl) {
         var url = new Url();
         url.setOriginalUrl(originalUrl);
-
+        var baseUrl = "https://qr-k.xyz/";
         var shortUrl = urlShortenerService.encode(originalUrl);
         url.setShortUrl(shortUrl);
 
         urlRepository.save(url);
-        return url.getShortUrl();
+        return baseUrl + url.getShortUrl();
     }
 }
 

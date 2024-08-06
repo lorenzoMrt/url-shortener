@@ -8,7 +8,7 @@ import jakarta.persistence.Id;
 @Entity
 public class Url {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long id;
     private String originalUrl;
     private String shortUrl;
