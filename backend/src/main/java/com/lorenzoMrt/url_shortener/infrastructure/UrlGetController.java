@@ -24,5 +24,4 @@ public class UrlGetController {
         var originalUrl = retrieveOriginalUrlUseCase.execute(shortUrl);
         return ResponseEntity.ok(originalUrl);
     }
-    
 }

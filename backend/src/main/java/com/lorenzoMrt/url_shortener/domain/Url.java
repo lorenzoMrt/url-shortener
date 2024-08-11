@@ -1,5 +1,7 @@
 package com.lorenzoMrt.url_shortener.domain;
 
+import java.time.LocalDateTime;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -15,6 +17,7 @@ public class Url {
     private Long id;
     private String originalUrl;
     private String shortUrl;
+    private LocalDateTime creationDateTime;
 
     public Url() {
     }
@@ -39,5 +42,14 @@ public class Url {
     public void setShortUrl(String shortUrl) {
         this.shortUrl = shortUrl;
     }
+
+    public LocalDateTime getCreationDateTime() {
+        return creationDateTime;
+    }
+
+    public void setCreationDateTime(LocalDateTime creationDateTime) {
+        this.creationDateTime = creationDateTime;
+    }
+    
 }
 
